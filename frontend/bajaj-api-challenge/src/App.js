@@ -11,7 +11,7 @@ const App = () => {
   // Handle JSON input submission
   const handleSubmit = async (jsonData) => {
     try {
-      const res = await axios.post('http://localhost:3000/bfhl', jsonData);
+      const res = await axios.post('https://us-central1-testbfhl-ba410.cloudfunctions.net/api/bfhl', jsonData);
       setResponse(res.data);
     } catch (err) {
       console.error('Error submitting the JSON data', err);
